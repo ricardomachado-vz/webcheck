@@ -18,20 +18,24 @@
                 <p class="subtitulo">
                     Sistema de manutenção preventiva
                 </p>
-                <form>
+                <form onsubmit="login(event)">
                     <div class="mb-3">
                         <input type="email"
                                class="form-control"
+                               id="email"
                                placeholder="Login">
                     </div>
 
                     <div class="mb-3">
                         <input type="password"
                                class="form-control"
+                                id="password"
                                placeholder="Senha">
                     </div>
 
-                    <button class="btn btn-primary w-100">
+                    <button type= "submit"
+                            class="btn btn-primary w-100"
+                            onclick="login()">
                         Entrar
                     </button>
 
@@ -46,5 +50,8 @@
     </main>
 
     <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/supabase.js"></script>
+    <script src="assets/js/auth.js"></script>
 </body>
 </html>
