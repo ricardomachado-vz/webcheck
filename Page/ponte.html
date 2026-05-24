@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WebCheck</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#1f1f1f;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+}
+
+.container{
+    width:1100px;
+
+    background:
+    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+    url("img/fundo.jpg");
+
+    background-size:70%;
+    background-position:center;
+
+    padding:20px;
+    border-radius:10px;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.titulo h1{
+    background:#eee;
+    display:inline-block;
+    padding:6px 20px;
+    font-size:18px;
+}
+
+.titulo p{
+    font-size:14px;
+    font-weight:bold;
+}
+
+.bloco{
+    background:rgba(255,255,255,0.5);
+    padding:12px;
+    margin-bottom:20px;
+}
+
+.bloco h2{
+    margin-bottom:15px;
+}
+
+.linha{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.campo{
+    flex:1;
+    min-width:180px;
+}
+
+.campo label{
+    display:block;
+    margin-bottom:5px;
+    font-size:13px;
+}
+
+.campo input{
+    width:100%;
+    padding:7px;
+}
+
+.lista{
+    flex:1;
+}
+
+.item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    font-size:13px;
+}
+
+.item span{
+    width:180px;
+}
+
+.evidencia{
+    width:220px;
+}
+
+.upload{
+    width:100%;
+    height:150px;
+    border:2px dashed #777;
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+button{
+    width:250px;
+    padding:12px;
+    display:block;
+    margin:20px auto 0;
+    border:none;
+    background:#ddd;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<form>
+
+<div class="titulo">
+    <h1>PREVENTIVA ELETROMECÂNICA</h1>
+    <p>PONTE ROLANTE</p>
+</div>
+<div class="bloco">
+
+<h2>PREVENTIVA ELETROMECÂNICA – PONTE ROLANTE</h2>
+
+<h3>1.0 – Materiais e Equipamentos</h3>
+
+<div class="item">
+1.1 – Escova rotativa
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+1.2 – Desengripante
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+1.3 – Limpa contato
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+1.4 – Panos seco
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+1.5 – Escova de aço
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+1.6 – Desenho elétrico
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+1.7 – Caixa de ferramenta
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+1.8 – Parafusadeiras
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+1.9 – Lixadeira
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<br>
+
+<label>Obs:</label>
+<input type="text" style="width:100%;">
+
+</div>
+
+<!-- SEGURANÇA -->
+
+<div class="bloco">
+
+<h3>2.0 – Segurança e Meio Ambiente</h3>
+
+<div class="item">
+2.1 – Realizar inspeção de pré-uso dos EPI’s
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+2.2 – Realizar avaliação da área
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+2.3 – Fazer APR
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+2.4 – Teste do rádio transceptor e controle remoto
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+2.5 – Realizar teste operacional
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+2.6 – Realizar testes operacionais em todos os fins de curso
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+2.7 – Isolar a área
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+2.8 – Realizar bloqueio e teste de energia zero
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<br>
+
+<label>Obs:</label>
+<input type="text" style="width:100%;">
+
+</div>
+
+<!-- INSPEÇÃO -->
+
+<div class="bloco">
+
+<h3>Inspeção da Ponte Rolante</h3>
+
+<div class="linha">
+
+<div class="campo">
+<label>Equipamento</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Capacidade da Ponte Rolante</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Tensão de Serviço</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Datas</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="linha">
+
+<div class="campo">
+<label>Número da OM</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Metros de elevação</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Motor do tipo (elevação)</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Translação do carro</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="linha">
+
+<div class="campo">
+<label>Motor do tipo (carro)</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Translação da ponte</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Motor do tipo (ponte)</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Abastecimento de força</label>
+<input type="text">
+</div>
+
+</div>
+
+</div>
+
+<!-- GANCHO -->
+
+<div class="bloco">
+
+<h3>3.1 – Avaliação do gancho</h3>
+
+<div class="linha">
+
+<div class="campo">
+<label>Gancho nº</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Medida h2 original</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Medida h2 mínima</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Medida h2 encontrada</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="linha">
+
+<div class="campo">
+<label>Medida A2 original</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Medida A2 mínima</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Medida A2 encontrada</label>
+<input type="text">
+</div>
+
+</div>
+
+<br>
+
+<div class="item">
+3.1.1 – Gancho em boas condições?
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+3.1.2 – Trava de segurança operacional?
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="item">
+3.1.3 – Moitão em boas condições?
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+</div>
+
+<!-- CABO -->
+
+<div class="bloco">
+
+<h3>3.3 – Avaliação do cabo de aço</h3>
+
+<div class="item">
+3.3.1 – Cabo lubrificado corretamente?
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+<input type="checkbox"> N/A
+</div>
+
+<div class="linha">
+
+<div class="campo">
+<label>Diâmetro nominal</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Construção</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Alma</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="item">
+3.3.2 – Há arames rompidos?
+<input type="checkbox"> NÃO
+<input type="checkbox"> SIM
+</div>
+
+<div class="item">
+3.3.3 – Quantidade permitida?
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+3.3.4 – Cabo sem deformações?
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+3.3.5 – Necessária substituição imediata?
+<input type="checkbox"> NÃO
+<input type="checkbox"> SIM
+</div>
+
+</div>
+
+<!-- FINAL -->
+
+<div class="bloco">
+
+<h3>4.0 – Final da atividade</h3>
+
+<div class="item">
+4.1 – Recolher materiais da área
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+4.2 – Realizar 5S na área
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+4.3 – Realizar desbloqueio do equipamento
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+</div>
+
+<!-- RESULTADOS -->
+
+<div class="bloco">
+
+<h3>5.0 – Resultados esperados</h3>
+
+<div class="item">
+5.1 – Garantir operacionalidade
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+5.2 – Reduzir paradas não planejadas
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<div class="item">
+5.3 – Mapear possíveis falhas futuras
+<input type="checkbox"> OK
+<input type="checkbox"> NOK
+</div>
+
+<br><br>
+
+<div class="linha">
+
+<div class="campo">
+<label>Aceite de Serviço</label>
+<input type="text">
+</div>
+
+<div class="campo">
+<label>Execução</label>
+<input type="text">
+</div>
+
+</div>
+
+</div>
+<button type="submit">
+Emitir documento PDF
+</button>
+</body>
+</html>
