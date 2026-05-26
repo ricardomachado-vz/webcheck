@@ -10,6 +10,8 @@ body{
     background-image: url('../img/background.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
 
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -183,4 +185,218 @@ body{
     color:inherit;
     display:block;
 
+}
+
+/****************************navbar**************************************************************************************/
+.navbar-style{
+    background-color: #111827;
+}
+.title-h2{
+    color: #ffffff;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+/****************************main**************************************************************************************/
+.title{
+    background-color: #111827;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px auto;
+    width: 1000px;
+    height: 65px;
+}
+
+.title2{
+    background-color: #111827;
+    color: #ffffff;
+    text-align: left;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    border-radius: 8px;
+    padding: 8px 4px;
+    margin: 8px 4px;
+    height: 55px;
+}
+
+div h2{
+    margin: 0px;
+}
+div h3{
+    margin: 0px;
+}
+/*****************************************/
+.espacamento{
+    margin: 10px;
+}
+.col-space{
+    padding: 0px 16px 0px 16px;
+    margin: 0px 16px 0px 16px;
+}
+.col-auto{
+    padding: 0px;
+    margin: 0px;
+    color: #000000;
+}
+.form-style{
+    background-color: rgb(217, 217, 217, 0.85);
+    border-radius: 4px;
+    border: 1px solid #3a3a3a;
+}
+.form-style:hover{
+    background-color: rgba(184, 184, 184, 0.95);
+    border: 1px solid #000000;
+}
+.form-style:focus{
+    background-color: rgb(134, 134, 134, 0.95);
+    box-shadow: none;
+    border: 1px solid #bbbbbb;
+}
+.col-form-label{
+    padding-bottom: 0px;
+}
+/*****************************************/
+.section-style{
+    padding: 8px;
+    margin: 8px;
+}
+.options{
+    margin: 16px 0px;
+    padding-left: 8px;
+    
+    align-items: center;
+    display: flex;
+    
+}
+.container2{
+    margin: 8px;
+    width: 450px;
+}
+.row2{
+    width: 800px;
+}
+.col-space2{
+    padding: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
+}
+/*****************************************/
+.button-style{
+    background-color: rgb(134, 134, 134, 0.0);
+    border: 2px solid #000000;
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+}
+.button-style:hover{
+    background-color: #3a3a3a;
+    border: 2px solid #ffffff;
+}
+.button-style:focus{
+    border: 2px solid #ffffff;
+    box-shadow: none;
+}
+.button-style:checked{
+    background-color: #3a3a3a;
+    border: 1px solid #ffffff;
+}
+/*****************************************/
+.camera{
+    padding: 4px;
+}
+i.camera{
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+}
+input.camera{
+    display: none;
+}
+/*****************************************/
+.options2{
+    width: 180px;
+    height: 210px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: auto;
+    align-self: center;
+    display: flex;
+    position: absolute;
+    right: 80px;
+}
+.card-style{
+    background-color: rgb(217, 217, 217, 0.85);
+    border-radius: 8px;
+    border: 1px solid #000000;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+}
+.p-card{
+    text-align: center;
+    margin-bottom: 4px;
+    color: #000000;
+}
+.card-position{
+    position: absolute;
+}
+/*****************************************/
+.card-icon{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(134, 134, 134, 0.0);
+    border: 0px;
+    cursor: pointer;
+}
+input.card-icon{
+    display: none;
+}
+i.card{
+    color: #000000;
+    font-size: 30px;
+}
+/*****************************************/
+.btn-style{
+    background-color: rgb(217, 217, 217, 0.85);
+    color: #000000;
+    border-radius: 4px;
+    border: 1px solid #3a3a3a;
+}
+.btn-style:hover{
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+.btn:first-child:active{
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #3a3a3a;
+}
+/********************/
+.btn-pdf{
+    padding: 8px;
+    margin: 16px 0px;
+}
+.btn-position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/****************************footer*************************************************************************************/
+footer{
+    background-color: #111827;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+.text-footer{
+    margin: 0%;
 }
