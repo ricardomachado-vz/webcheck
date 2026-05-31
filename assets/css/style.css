@@ -272,13 +272,6 @@ div h3{
     align-items: center;
     color: #000000;
 }
-.form-control{
-    border-color: #000000;
-}
-.form-control:focus{
-    box-shadow: none;
-    border-color: #ffffff;
-}
 
 /************************************/
 
@@ -298,10 +291,18 @@ div h3{
     background-color: #111827;
     border-color: #ffffff;
 }
-.form-control{
+.form-control01{
+    border-color: #000000;
+    border-radius: 8px;
+    outline: 0px;
+    transition: .15s;
     height: 40px;
     width: 500px;
     margin: 0px 10px;
+}
+.form-control01:focus{
+    box-shadow: none;
+    border-color: #ffffff;
 }
 
 /************************************/
