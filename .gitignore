@@ -1,1 +1,8 @@
 *Zone.Identifier*
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+supabase/.temp/
+supabase/functions/.env

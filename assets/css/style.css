@@ -93,7 +93,49 @@ body{
     left: 0;
 
     z-index: 1000;
-    
+
+}
+
+.user-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.2;
+}
+
+.user-role{
+    color: #d1d5db;
+    font-size: 12px;
+}
+
+.topbar-spacer,
+.user-profile{
+    width: 140px;
+}
+
+.user-menu-toggle{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.2;
+    padding: 0;
+    border: 0;
+}
+
+.user-menu-label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.user-menu-toggle:hover,
+.user-menu-toggle:focus{
+    color: #ffffff;
+}
+
+.user-menu-toggle::after{
+    margin-left: 0;
 }
 
 .dashboard-container{
@@ -123,6 +165,39 @@ body{
     text-align: center;
     font-size: 52px;
     font-weight: bold;
+}
+
+.usuarios-box{
+    max-width: 1100px;
+}
+
+.usuarios-box h1{
+    font-size: 40px;
+}
+
+.usuarios-section{
+    padding-top: 10px;
+}
+
+.usuarios-section h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.usuarios-lista-section{
+    border-top: 1px solid #dee2e6;
+    margin-top: 32px;
+    padding-top: 28px;
+}
+
+.usuarios-lista-section .table{
+    min-width: 760px;
+}
+
+.usuario-acoes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
 }
 
 .dashboard-box .subtitle{
