@@ -15,20 +15,40 @@
 <body>
     <div class="overlay">
         <header class="topbar">
-            <div class="user-area">
-                    <button
-                        class="btn btn-outline-light"
-                        onclick="logout()">
-                                Sair
-                    </button>
-            </div>
+            <div class="topbar-spacer"></div>
 
             <div class="logo-area">
                 <h2>WebCheck</h2>
             </div>
 
-            <div class="user-area">
-                <span>Usuário</span>
+            <div class="user-area user-profile dropdown">
+                <button class="btn user-menu-toggle dropdown-toggle"
+                        type="button"
+                        id="menuUsuario"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    <span class="user-menu-label">
+                        <span id="usuarioNome">Usuário</span>
+                        <small id="usuarioTipo" class="user-role d-none"></small>
+                    </span>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="menuUsuario">
+                    <li id="adminCadastroUsuario" class="d-none">
+                        <a href="cadastro-usuario.html" class="dropdown-item">
+                            Gerenciar usuários
+                        </a>
+                    </li>
+                    <li id="adminMenuDivider" class="d-none"><hr class="dropdown-divider"></li>
+                    <li>
+                        <button type="button"
+                                class="dropdown-item"
+                                onclick="logout()">
+                            Sair
+                        </button>
+                    </li>
+                </ul>
             </div>
 
         </header>
@@ -101,6 +121,7 @@
         </main>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/supabase.js"></script>
 <script src="../assets/js/session.js"></script>
 <script src="../assets/js/usuarios.js"></script>
