@@ -605,3 +605,141 @@ footer{
 .text-footer{
     margin: 0%;
 }
+
+/* Checklists de monovia e ponte rolante */
+.checklist-container{
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.checklist-container .title{
+    width: 100%;
+    height: auto;
+    min-height: 65px;
+}
+
+.checklist-container .checklist-title h2{
+    font-size: 24px;
+}
+
+.checklist-container .bloco{
+    margin-bottom: 24px;
+}
+
+.checklist-container .bloco > h2{
+    display: none;
+}
+
+.checklist-container .bloco > h3{
+    width: fit-content;
+    max-width: 100%;
+    min-height: 60px;
+    margin: 16px 0 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+.checklist-container .list1{
+    width: 100%;
+    min-height: 48px;
+    margin: 4px 0;
+    padding: 8px;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.checklist-container .content{
+    width: auto;
+    margin: 0;
+    font-size: 16px;
+}
+
+.checklist-container .btn-group2{
+    width: auto;
+    min-width: 150px;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.checklist-container .linha{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin: 8px 0;
+    padding: 12px;
+    background-color: #ffffff75;
+    border-radius: 4px;
+}
+
+.checklist-container .campo label{
+    min-height: 38px;
+    display: flex;
+    align-items: end;
+    margin-bottom: 4px;
+    color: #000000;
+    font-size: 14px;
+}
+
+.checklist-container .campo input{
+    width: 100%;
+    min-height: 40px;
+    padding: 6px 12px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+.checklist-container .campo input:focus{
+    border-color: #ffffff;
+    outline: 0;
+}
+
+.checklist-container .button-pdf{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px){
+    .checklist-container .checklist-title h2{
+        font-size: 20px;
+    }
+
+    .checklist-container .bloco > h3{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .checklist-container .list1{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .checklist-container .btn-group2{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .checklist-container .linha{
+        grid-template-columns: 1fr;
+    }
+
+    .checklist-container .campo label{
+        min-height: auto;
+    }
+
+    .checklist-container .obs{
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .checklist-container .form-control01{
+        width: 100%;
+        margin: 4px 0 0;
+    }
+}
