@@ -743,3 +743,102 @@ footer{
         margin: 4px 0 0;
     }
 }
+
+/* Captura local de fotos dos checklists */
+.checklist-item-com-foto{
+    flex-wrap: wrap;
+}
+
+.campo-com-foto{
+    min-width: 240px;
+}
+
+.campo-foto{
+    flex: 1 0 100%;
+    width: 100%;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(17, 24, 39, 0.2);
+}
+
+.campo-com-foto .campo-foto{
+    margin-top: 10px;
+}
+
+.checklist-container .campo-foto-input,
+.checklist-container .campo .campo-foto-input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    min-height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.campo-foto-acoes{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.campo-foto-selecionar{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    cursor: pointer;
+}
+
+.campo-foto-remover{
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.campo-foto-preview{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.campo-foto-preview img{
+    width: 112px;
+    height: 84px;
+    object-fit: cover;
+    border: 1px solid #111827;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.campo-foto-nome{
+    min-width: 0;
+    color: #111827;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.campo-foto-erro{
+    display: block;
+    margin-top: 6px;
+}
+
+@media (max-width: 768px){
+    .campo-foto-preview{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .campo-foto-preview img{
+        width: min(100%, 240px);
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
