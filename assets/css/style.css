@@ -662,6 +662,14 @@ footer{
     min-height: 65px;
 }
 
+.checklist-container .title2{
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    min-height: 64px;
+    margin: 16px 0 12px;
+}
+
 .checklist-container .checklist-title h2{
     font-size: 24px;
 }
@@ -687,7 +695,10 @@ footer{
     font-size: 22px;
 }
 
-.checklist-container .list1{
+.checklist-container .list1,
+.checklist-container .list2,
+.checklist-container .list3,
+.checklist-container .list4{
     width: 100%;
     min-height: 48px;
     margin: 4px 0;
@@ -696,8 +707,13 @@ footer{
     gap: 16px;
 }
 
-.checklist-container .content{
+.checklist-container .content,
+.checklist-container .content2,
+.checklist-container .content3,
+.checklist-container .content4{
     width: auto;
+    max-width: 100%;
+    min-width: 0;
     margin: 0;
     font-size: 16px;
 }
@@ -707,6 +723,34 @@ footer{
     min-width: 150px;
     justify-content: flex-end;
     flex-shrink: 0;
+}
+
+.checklist-container .resp1,
+.checklist-container .resp2,
+.checklist-container .resp3{
+    flex: 0 0 auto;
+    padding: 0;
+}
+
+.checklist-container .form-control2,
+.checklist-container .form-control3,
+.checklist-container .form-control4{
+    max-width: 100%;
+}
+
+.checklist-container .space1{
+    width: 100%;
+    margin: 8px 0;
+}
+
+.checklist-container .space-content{
+    width: auto;
+    max-width: 100%;
+}
+
+.checklist-container .final-sec{
+    width: 100%;
+    max-width: 800px;
 }
 
 .checklist-container .linha{
@@ -756,7 +800,14 @@ footer{
         font-size: 18px;
     }
 
-    .checklist-container .list1{
+    .checklist-container .title2{
+        max-width: 100%;
+    }
+
+    .checklist-container .list1,
+    .checklist-container .list2,
+    .checklist-container .list3,
+    .checklist-container .list4{
         align-items: flex-start;
         flex-direction: column;
     }
@@ -764,6 +815,24 @@ footer{
     .checklist-container .btn-group2{
         width: 100%;
         justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .checklist-container .resp1,
+    .checklist-container .resp2,
+    .checklist-container .resp3{
+        width: 100%;
+    }
+
+    .checklist-container .form-control2,
+    .checklist-container .form-control3,
+    .checklist-container .form-control4{
+        width: 100%;
+        margin: 4px 0 0;
+    }
+
+    .checklist-container .final-sec{
+        padding: 8px 0;
     }
 
     .checklist-container .linha{
