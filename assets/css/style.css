@@ -578,6 +578,48 @@ div h3{
     background-color: #111827;
     border: 2px solid #ffffff;
 }
+.button-pdf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.button-pdf.gerando,
+.button-pdf:disabled{
+    cursor: wait;
+    opacity: 0.75;
+}
+
+.assinaturas-checklist{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 24px;
+    margin: 32px 0 8px;
+    padding: 16px;
+    background-color: #ffffff75;
+    border-radius: 4px;
+}
+
+.assinatura-campo{
+    color: #000000;
+}
+
+.assinatura-campo span{
+    display: block;
+    margin-bottom: 22px;
+    font-weight: 600;
+}
+
+.assinatura-linha{
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+@media (max-width: 768px){
+    .assinaturas-checklist{
+        grid-template-columns: 1fr;
+    }
+}
 .btn:first-child:active{
     background-color: #111827;
     border: 2px solid #000000;

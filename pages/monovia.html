@@ -19,7 +19,7 @@
     </nav>
     <main class="checklist-container">
 
-<form>
+<form id="formChecklist" data-pdf-titulo="Preventiva - Talha Manual de Corrente de Monovia / Pórtico / Braço Giratório">
 
 <div class="title checklist-title"><h2>TALHA MANUAL DE CORRENTE MONOVIA / PÓRTICO / BRAÇO GIRATÓRIO</h2></div>
 
@@ -1064,30 +1064,30 @@
                 </div>
             </div>
 
-<br><br>
+<div class="assinaturas-checklist" aria-label="Assinaturas">
+    <div class="assinatura-campo" data-assinatura="Aceite de Serviço">
+        <span>Aceite de Serviço</span>
+        <div class="assinatura-linha"></div>
+    </div>
 
-<div class="linha">
-
-<div class="campo">
-<label>Aceite de Serviço</label>
-<input type="text">
-</div>
-
-<div class="campo">
-<label>Execução</label>
-<input type="text">
-</div>
-
+    <div class="assinatura-campo" data-assinatura="Execução">
+        <span>Execução</span>
+        <div class="assinatura-linha"></div>
+    </div>
 </div>
 
 </div>
 
-<button type="submit" class="btn button-pdf">
-Emitir documento PDF
+<button type="button" id="emitirPdf" class="btn button-pdf">
+<i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+<span>Emitir documento PDF</span>
 </button>
 
 </form>
     </main>
 <script src="../assets/js/codFotos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.min.js"></script>
+<script src="../assets/js/gerarPdf.js"></script>
 </body>
 </html>
