@@ -1,6 +1,7 @@
 (function () {
     const form = document.getElementById('formChecklist');
     const botao = document.getElementById('emitirPdf');
+    let pdfAtualUrl = null;
 
     if (!form || !botao) {
         return;
@@ -476,11 +477,79 @@
         setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
 
+    function obterContainerAcoesPdf() {
+        let container = document.getElementById('pdfGeradoAcoes');
+
+        if (container) {
+            return container;
+        }
+
+        container = document.createElement('div');
+        container.id = 'pdfGeradoAcoes';
+        container.className = 'pdf-gerado-acoes';
+        botao.insertAdjacentElement('afterend', container);
+
+        return container;
+    }
+
+    function criarLinkPdf({ texto, url, nome, abrirNovaAba = false }) {
+        const link = document.createElement('a');
+
+        link.className = abrirNovaAba
+            ? 'btn btn-outline-dark pdf-gerado-link'
+            : 'btn btn-dark pdf-gerado-link';
+        link.href = url;
+        link.textContent = texto;
+
+        if (abrirNovaAba) {
+            link.target = '_blank';
+            link.rel = 'noopener';
+        } else {
+            link.download = nome;
+        }
+
+        return link;
+    }
+
+    function exibirAcoesPdf(blob, nome) {
+        if (pdfAtualUrl) {
+            URL.revokeObjectURL(pdfAtualUrl);
+        }
+
+        pdfAtualUrl = URL.createObjectURL(blob);
+
+        const container = obterContainerAcoesPdf();
+        container.innerHTML = '';
+
+        const mensagem = document.createElement('p');
+        mensagem.className = 'pdf-gerado-texto';
+        mensagem.textContent = 'PDF gerado. Se o download não iniciar automaticamente, use uma das opções abaixo.';
+
+        const acoes = document.createElement('div');
+        acoes.className = 'pdf-gerado-botoes';
+        acoes.append(
+            criarLinkPdf({
+                texto: 'Baixar PDF',
+                url: pdfAtualUrl,
+                nome
+            }),
+            criarLinkPdf({
+                texto: 'Abrir PDF',
+                url: pdfAtualUrl,
+                nome,
+                abrirNovaAba: true
+            })
+        );
+
+        container.append(mensagem, acoes);
+    }
+
     function entregarPdf(doc, titulo) {
         const nome = nomeArquivo(titulo);
         const blob = doc.output('blob');
 
         baixarBlob(blob, nome);
+        exibirAcoesPdf(blob, nome);
     }
 
     async function gerarPdf() {

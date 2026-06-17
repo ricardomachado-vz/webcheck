@@ -590,6 +590,34 @@ div h3{
     opacity: 0.75;
 }
 
+.pdf-gerado-acoes{
+    width: min(100%, 520px);
+    margin: 14px auto 24px;
+    padding: 12px;
+    background-color: #ffffffd9;
+    border: 1px solid rgba(17, 24, 39, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pdf-gerado-texto{
+    margin: 0 0 10px;
+    color: #111827;
+    font-size: 14px;
+}
+
+.pdf-gerado-botoes{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pdf-gerado-link{
+    min-width: 132px;
+    padding: 8px 12px;
+}
+
 .assinaturas-checklist{
     display: grid;
     grid-template-columns: repeat(2, minmax(220px, 1fr));
@@ -829,6 +857,14 @@ footer{
     .checklist-container .form-control4{
         width: 100%;
         margin: 4px 0 0;
+    }
+
+    .pdf-gerado-botoes{
+        flex-direction: column;
+    }
+
+    .pdf-gerado-link{
+        width: 100%;
     }
 
     .checklist-container .final-sec{
