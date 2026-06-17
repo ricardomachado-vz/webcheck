@@ -28,14 +28,56 @@
         return textoLimpo(label?.textContent) || marcado.value || RESPOSTA_NAO_MARCADA;
     }
 
+    function obterGruposConteudo() {
+        const blocos = Array.from(form.querySelectorAll(':scope > .bloco'));
+
+        if (blocos.length) {
+            return blocos.map((bloco) => ({
+                titulo: textoLimpo(bloco.querySelector(':scope > h3')?.textContent),
+                elemento: bloco
+            }));
+        }
+
+        const grupos = [];
+        let tituloAtual = '';
+
+        Array.from(form.children).forEach((filho) => {
+            if (filho.matches('.title, .title2')) {
+                tituloAtual = textoLimpo(filho.textContent);
+                return;
+            }
+
+            if (filho.matches('section') && !filho.classList.contains('final-sec')) {
+                grupos.push({
+                    titulo: tituloAtual,
+                    elemento: filho
+                });
+            }
+        });
+
+        return grupos;
+    }
+
+    function obterDescricaoRegistro(registro) {
+        return textoLimpo(
+            registro.querySelector('.content, .content2, .content3, .content4')?.textContent
+        );
+    }
+
+    function obterValorRegistro(registro) {
+        const controle = registro.querySelector('textarea, input:not([type="radio"]):not([type="file"]), select');
+        return controle ? valorCampo(controle) : '';
+    }
+
     function obterDadosFormulario() {
         const secoes = [];
         const assinaturas = Array.from(form.querySelectorAll('[data-assinatura]'))
             .map((assinatura) => textoLimpo(assinatura.dataset.assinatura))
             .filter(Boolean);
 
-        form.querySelectorAll('.bloco').forEach((bloco) => {
-            const titulo = textoLimpo(bloco.querySelector(':scope > h3')?.textContent);
+        obterGruposConteudo().forEach((grupo) => {
+            const bloco = grupo.elemento;
+            const titulo = grupo.titulo;
             const campos = [];
             const itens = [];
             const observacoes = [];
@@ -53,14 +95,23 @@
                 }
             });
 
-            bloco.querySelectorAll(':scope > .list1').forEach((item) => {
-                const descricao = textoLimpo(item.querySelector('.content')?.textContent);
+            bloco.querySelectorAll(':scope > .list1, :scope > .list2, :scope > .list3, :scope > .list4').forEach((item) => {
+                const descricao = obterDescricaoRegistro(item);
                 const observacao = item.querySelector('.obs textarea');
+                const temResposta = item.querySelector('input[type="radio"]');
+                const valor = obterValorRegistro(item);
 
-                if (descricao) {
+                if (descricao && temResposta) {
                     itens.push({
                         descricao,
                         resposta: obterResposta(item),
+                        observacao: valor,
+                        fotoId: item.dataset.foto || null
+                    });
+                } else if (descricao && valor) {
+                    campos.push({
+                        label: descricao,
+                        valor,
                         fotoId: item.dataset.foto || null
                     });
                 }
@@ -441,9 +492,9 @@
             );
             y = await adicionarRegistrosComFotos(
                 doc,
-                ['Item de inspeção', 'Resposta'],
+                ['Item de inspeção', 'Resposta', 'Observação'],
                 secao.itens,
-                (item) => [item.descricao, item.resposta],
+                (item) => [item.descricao, item.resposta, item.observacao || ''],
                 fotosPorId,
                 y,
                 dados.titulo

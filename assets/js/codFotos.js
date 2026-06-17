@@ -3,7 +3,8 @@ const fotosChecklist = new Map();
 
 function criarCampoFoto(elemento) {
     const identificador = elemento.dataset.foto;
-    const titulo = elemento.dataset.fotoTitulo;
+    const tituloElemento = elemento.querySelector('.content, .content2, .content3, .content4');
+    const titulo = elemento.dataset.fotoTitulo || tituloElemento?.textContent?.trim() || identificador;
     const inputId = `foto-${identificador}`;
     const campo = document.createElement('div');
 
