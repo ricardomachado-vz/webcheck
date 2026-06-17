@@ -462,6 +462,27 @@
         return `${normalizado || 'checklist'}-${data}.pdf`;
     }
 
+    function baixarBlob(blob, nome) {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+
+        link.href = url;
+        link.download = nome;
+        link.rel = 'noopener';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    function entregarPdf(doc, titulo) {
+        const nome = nomeArquivo(titulo);
+        const blob = doc.output('blob');
+
+        baixarBlob(blob, nome);
+    }
+
     async function gerarPdf() {
         if (!window.jspdf?.jsPDF) {
             throw new Error('A biblioteca de geração de PDF não foi carregada.');
@@ -504,7 +525,7 @@
 
         y = adicionarAssinaturas(doc, dados.assinaturas, y, dados.titulo);
         adicionarRodapes(doc);
-        doc.save(nomeArquivo(dados.titulo));
+        entregarPdf(doc, dados.titulo);
     }
 
     botao.addEventListener('click', async () => {
