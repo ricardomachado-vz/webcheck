@@ -1,3 +1,4 @@
+(function () {
 const LIMITE_FOTO_BYTES = 10 * 1024 * 1024;
 const fotosChecklist = new Map();
 
@@ -113,3 +114,4 @@ document.querySelectorAll('[data-foto]').forEach(criarCampoFoto);
 
 window.webcheckFotos = fotosChecklist;
 window.obterFotosChecklist = () => Array.from(fotosChecklist.values());
+})();
